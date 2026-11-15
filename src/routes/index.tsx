@@ -50,7 +50,7 @@ function Marketplace() {
     const anchor = document.createElement('a'); anchor.href = url; anchor.download = 'erp-urunleri.csv'; anchor.click(); URL.revokeObjectURL(url);
   };
   const openMatch = (id: number) => { setFocused(id); setDialog('match'); };
-  const changeMatch = (match: string) => { setProducts(prev => prev.map(p => p.id === focused ? { ...p, match, status: 'matched' } : p)); setDialog(null); };
+  const changeMatch = (match: string) => { setProducts(prev => prev.map(p => p.id === focused ? { ...p, match, status: match === 'Yeni Ürün Önerisi' ? 'new' : 'matched' } : p)); setDialog(null); };
   const titles: Record<string,string> = { help: 'Nasıl Çalışır?', settings: 'Entegrasyon Ayarları', connection: 'Bağlantı Ayarları', method, match: 'Eşleştirmeyi Değiştir', preview: 'Seçili Ürünleri Önizle', results: 'Eşleştirme Sonuçları', transfer: 'Marketplace’e Aktarım', notifications: 'Bildirimler', apps: 'Uygulamalar', account: 'Hesap Bilgileri' };
 
   return <div className="market-app">
