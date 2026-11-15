@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Keep the marketplace reference screen at the index route with no fixed left navigation; its shared visual tokens and responsive layout live in the global stylesheet to preserve reference consistency.
+- Marketplace interactions use in-memory demonstration state until a real integration is requested, so the visual replica never implies an actual external transfer.
