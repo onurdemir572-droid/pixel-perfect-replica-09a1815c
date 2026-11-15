@@ -21,11 +21,11 @@ export const Route = createFileRoute('/')({
 });
 
 const initialProducts = [
-  { id: 1, name: 'DYO DIŞ CEPHE BEŞYILDIZ SİL.DIŞ CEPHE B BAZ 15LT', brand: 'DYO', price: '1.350,00 ₺', match: 'Silikonlu Dış Cephe Boyası', image: dyo.url, status: 'matched' },
-  { id: 2, name: 'FİLLİ BOYA SİLİKONLU DIŞ CEPHE 7,5LT', brand: 'Filli Boya', price: '780,00 ₺', match: 'Silikonlu Dış Cephe Boyası', image: filli.url, status: 'matched' },
-  { id: 3, name: 'KALEKİM SERAMİK YAPIŞTIRICI 25KG', brand: 'Kalekim', price: '295,00 ₺', match: 'Seramik Yapıştırıcısı', image: kalekim.url, status: 'matched' },
-  { id: 4, name: 'PVC DİRSEK 90 DERECE 50MM', brand: '—', price: '45,00 ₺', match: 'PVC Dirsek', image: pvc.url, status: 'pending' },
-  { id: 5, name: 'ÖZEL YAPI MALZEMESİ', brand: 'Örnek', price: '320,00 ₺', match: 'Eşleşme bulunamadı', image: '', status: 'new' },
+  { id: 1, name: 'DYO DIŞ CEPHE BEŞYILDIZ SİL.DIŞ CEPHE B BAZ 15LT', brand: 'DYO', price: '1.350,00 ₺', match: 'Silikonlu Dış Cephe Boyası', image: dyo.url, status: 'matched', suggestions: ['Silikonlu Dış Cephe Boyası', 'Dış Cephe Boyası'] },
+  { id: 2, name: 'FİLLİ BOYA SİLİKONLU DIŞ CEPHE 7,5LT', brand: 'Filli Boya', price: '780,00 ₺', match: 'Silikonlu Dış Cephe Boyası', image: filli.url, status: 'matched', suggestions: ['Silikonlu Dış Cephe Boyası', 'Dış Cephe Boyası'] },
+  { id: 3, name: 'KALEKİM SERAMİK YAPIŞTIRICI 25KG', brand: 'Kalekim', price: '295,00 ₺', match: 'Seramik Yapıştırıcısı', image: kalekim.url, status: 'matched', suggestions: ['Seramik Yapıştırıcısı', 'Yapıştırıcı Harçları'] },
+  { id: 4, name: 'PVC DİRSEK 90 DERECE 50MM', brand: '—', price: '45,00 ₺', match: 'PVC Dirsek', image: pvc.url, status: 'pending', suggestions: ['PVC Dirsek', 'PVC Boru ve Eklentileri'] },
+  { id: 5, name: 'ÖZEL YAPI MALZEMESİ', brand: 'Örnek', price: '320,00 ₺', match: 'Eşleşme bulunamadı', image: '', status: 'new', suggestions: ['Yapı Malzemeleri'] },
 ];
 const methods = [ { label: 'Tüm Ürünler', icon: Layers }, { label: 'Kategoriye Göre Seç', icon: Folder }, { label: 'Ürün Grubuna Göre Seç', icon: Layers }, { label: 'Markaya Göre Seç', icon: Tag }, { label: 'Stoktaki Ürünler', icon: Package }, { label: 'Manuel Seçim', icon: SquareCheck } ];
 type DialogKind = 'help' | 'settings' | 'connection' | 'method' | 'match' | 'preview' | 'results' | 'transfer' | 'notifications' | 'apps' | 'account' | null;
